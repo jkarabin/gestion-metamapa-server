@@ -29,6 +29,9 @@ public class SecurityConfig {
           // PERMITIR GET A COLECCIONES
           auth.requestMatchers(HttpMethod.GET, "/api/colecciones").permitAll();
 
+          // PERMITIR GET A HECHOS
+          auth.requestMatchers(HttpMethod.GET, "/api/hechos").permitAll();
+
           // Rutas autenticadas
           auth.requestMatchers("/api/auth/user/roles-permisos").authenticated();
 
